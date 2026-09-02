@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // get flask ngrok api url
 
     String apiUrl = await vehicleService.getApiUrl();
-    var endpoint = apiUrl != null ? apiUrl : 'http://10.0.2.2:3000/upload';
+    var endpoint = apiUrl;
     var request = http.MultipartRequest("POST", Uri.parse(endpoint));
     var pic2 = await http.MultipartFile.fromPath("upload", pickedFile.path);
     request.files.add(pic2);

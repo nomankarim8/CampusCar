@@ -119,9 +119,7 @@ class _NewVehicleFormState extends State<NewVehicleForm> {
         lastDate: DateTime(2030, 7),
         helpText: 'Select a date',
       );
-      if (newDate != null) {
-        widget.setExpiryDate(newDate);
-      }
+      widget.setExpiryDate(newDate);
     }
   }
 

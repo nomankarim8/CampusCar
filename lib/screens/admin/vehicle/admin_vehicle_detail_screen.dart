@@ -181,17 +181,16 @@ class ProfileHeader extends StatelessWidget {
             color: Colors.black38,
           ),
         ),
-        if (actions != null)
-          Container(
-            width: double.infinity,
-            height: 200,
-            padding: const EdgeInsets.only(bottom: 0.0, right: 0.0),
-            alignment: Alignment.bottomRight,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: actions,
-            ),
+        Container(
+          width: double.infinity,
+          height: 200,
+          padding: const EdgeInsets.only(bottom: 0.0, right: 0.0),
+          alignment: Alignment.bottomRight,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: actions,
           ),
+        ),
         Container(
           width: double.infinity,
           margin: const EdgeInsets.only(top: 160),
@@ -208,13 +207,13 @@ class ProfileHeader extends StatelessWidget {
                 title,
                 style: Theme.of(context).textTheme.headline5,
               ),
-              if (subtitle != null) ...[
-                const SizedBox(height: 5.0),
-                Text(
-                  subtitle,
-                  style: Theme.of(context).textTheme.subtitle1,
-                ),
-              ]
+              ...[
+              const SizedBox(height: 5.0),
+              Text(
+                subtitle,
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+            ]
             ],
           ),
         )

@@ -39,7 +39,7 @@ class _AdminLogsScreenState extends State<AdminLogsScreen> {
   }
 
   void downloadPdfHandler() {
-    var logs = filteredData != null ? filteredData : allLogs;
+    var logs = filteredData;
 
     final headers = [
       'Owner Name',
@@ -66,7 +66,7 @@ class _AdminLogsScreenState extends State<AdminLogsScreen> {
   }
 
   downloadCsvHandler() async {
-    var logs = filteredData != null ? filteredData : allLogs;
+    var logs = filteredData;
     List<List<dynamic>> rows = [];
     rows.add([
       "Name",
@@ -245,7 +245,7 @@ class _AdminLogsScreenState extends State<AdminLogsScreen> {
                       DataColumn(label: Text('Direction')),
                     ],
                     source: _DataSource(context,
-                        filteredData != null ? filteredData : snapshot.data),
+                        filteredData),
                   );
                 } else if (snapshot.hasError) {
                   return Container(

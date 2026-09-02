@@ -37,7 +37,7 @@ class _AdminVehiclesScreenState extends State<AdminVehiclesScreen> {
   }
 
   downloadPdfHandler() {
-    var vehicles = filteredData != null ? filteredData : allVehicles;
+    var vehicles = filteredData;
     final headers = [
       'Owner Name',
       'License Plate',
@@ -69,7 +69,7 @@ class _AdminVehiclesScreenState extends State<AdminVehiclesScreen> {
   }
 
   downloadCsvHandler() async {
-    var vehicles = filteredData != null ? filteredData : allVehicles;
+    var vehicles = filteredData;
 
     List<List<dynamic>> rows = [];
     rows.add([
@@ -209,7 +209,7 @@ class _AdminVehiclesScreenState extends State<AdminVehiclesScreen> {
                       DataColumn(label: Text('Actions')),
                     ],
                     source: _DataSource(context,
-                        filteredData != null ? filteredData : snapshot.data),
+                        filteredData),
                   );
                 } else if (snapshot.hasError) {
                   return Container(

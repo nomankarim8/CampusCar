@@ -54,14 +54,14 @@ class ProfileHeader extends StatelessWidget {
                       style: Theme.of(context).textTheme.headline5,
                     )
                   : Container(),
-              if (subtitle != null && subtitle != "") ...[
+              if (subtitle != "") ...[
                 SizedBox(height: 5.0),
                 Text(
                   subtitle,
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ],
-              if (timestamp != null && timestamp != "") ...[
+              if (timestamp != "") ...[
                 SizedBox(height: 5.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

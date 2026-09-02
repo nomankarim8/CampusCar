@@ -32,11 +32,9 @@ class _DialogContentState extends State<DialogContent> {
       lastDate: DateTime(2030, 7),
       helpText: 'Select a date',
     );
-    if (newDate != null) {
-      setState(() {
-        editedDate = newDate.toString();
-      });
-    }
+    setState(() {
+      editedDate = newDate.toString();
+    });
   }
 
   void editVehicleHandler() async {
